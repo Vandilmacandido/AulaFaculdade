@@ -1,0 +1,17 @@
+{
+    "1": {
+        "nome": "alicate",
+        "quantidade": 10,
+        "categoria": "alicate"
+    },
+    "2": {
+        "nome": "estens\u00e3o",
+        "quantidade": 25,
+        "categoria": "eletrica"
+    },
+    "3": {
+        "nome": "tomada",
+        "quantidade": 20,
+        "categoria": "eletrica"
+    }
+}
