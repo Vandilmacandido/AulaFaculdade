@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <button class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul id="menuList">
+            <li>
+                <a href="#projetos">Projetos</a>
+            </li>
+            <li>
+                <a href="#sobre">Sobre</a>
+            </li>
+            <li>
+                <a href="#valores">Valores</a>
+            </li>
+            <li>
+                <a href="#contato">Contato</a>
+            </li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>DESENVOLVEDOR WEB</h1>
+    </header>
+
+    <h2>Meus projestos</h2>
+    <section id="projetos">
+        <div>
+            <h3>Delficlean</h3>
+            <a href="https://vandilmacandido.github.io/Delficlean/">
+                <img src="/asert/1.png">
+            </a>
+        </div>
+
+        <div>
+            <h3>Eva Strategy</h3>
+            <a href="https://evastrategy.com/">
+                <img src="/asert/2.png">
+            </a>
+        </div>
+
+        <div>
+            <h3>InovaTour</h3>
+            <a href="https://inovatoursite.web.app/">
+                <img src="/asert/3.png">
+            </a>
+        </div>
+    </section>
+
+    <section id="sobre">
+        <h2>Sobre mim</h2>
+        <img src="/asert/perfil.jpg">
+        <p>Sou Vandilma Santos, UX Designer apaixonada por tecnologia, impacto social e sustentabilidade. Acredito no poder do design para transformar realidades e criar soluções centradas nas pessoas.</p>
+        <p>Atualmente, estou me graduando em Análise e Desenvolvimento de Sistemas pela Anhanguera, o que tem ampliado minha visão técnica e fortalecido minha atuação no desenvolvimento de produtos digitais.</p>
+        <p>Minha trajetória começou com a vontade de ajudar outras pessoas por meio da inovação, e desde então participei de diversos hackathons e programas de aceleração, como o Desenvolve do Grupo Boticário e o FAST da Cesar School, onde aprimorei minhas habilidades em pesquisa, prototipagem e design estratégico.</p>
+        <p>Desenvolvo projetos que unem tecnologia e propósito, como o EcoGanha, iniciativa que incentiva o empreendedorismo local e a economia circular. Busco constantemente aprender, colaborar e inspirar outros profissionais a usar o design como ferramenta de mudança positiva.</p>
+
+
+        <img src="/asert/instagram-png.png">
+
+        <div>
+            <h2>Me siga no instagram</h2>
+            <a href="https://instagram.com/vandilmacandido">@vandilmacandido</a>
+        </div>
+    </section>
+
+    <section id="valores">
+        <h2>Valores</h2>
+
+        <table border="2">
+            <tr>
+                <th>Leading page</th>
+                <th>Ecommerce</th>
+                <th>Institucional</th>
+            </tr>
+
+            <tr>
+                <td>pagina unica para captacao de clientes</td>
+                <td>loja online</td>
+                <td>pagina profissional para sua empresa</td>
+            </tr>
+
+            <tr>
+                <td>R$2000,00</td>
+                <td>R$5000,00</td>
+                <td>R$1000,00</td>
+            </tr>
+        </table>
+    </section>
+
+    <section id="contato">
+        <h2>Entre em contato!</h2>
+
+        <form>
+           <label for="fname">Nome</label><br>
+           <input type="text" name="fname"><br>
+           
+           <label for="fmail">e-mail</label><br>
+           <input type="email" name="fmail"><br>
+
+           <label for="fnumber">Telefone</label><br>
+           <input type="number" name="fnumber"><br>
+
+           <h2>Qual serviço</h2>
+           <div>
+                <input type="checkbox" value="op1" name="service">
+                <label for="op1">Leading page</label><br>
+                <input type="checkbox" value="op2" name="service">
+                <label for="op2">ecommerce</label><br>
+                <input type="checkbox" value="op3" name="service">
+                <label for="op3">Institucional</label><br>
+           </div>
+           
+
+           <button type="submit">enviar</button><br>
+        </form>
+    </section>
+
+    <footer>
+        <h4>endereço</h4>
+        <p> Caruaru - PE</p>
+    </footer>
+
+    <script>
+        // Menu Hamburger
+        const menuToggle = document.getElementById('menuToggle');
+        const menuList = document.getElementById('menuList');
+        const menuLinks = menuList.querySelectorAll('a');
+
+        menuToggle.addEventListener('click', function() {
+            menuToggle.classList.toggle('active');
+            menuList.classList.toggle('active');
+        });
+
+        // Fechar menu ao clicar em um link
+        menuLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                menuToggle.classList.remove('active');
+                menuList.classList.remove('active');
+            });
+        });
+
+        // Fechar menu ao clicar fora
+        document.addEventListener('click', function(event) {
+            const isClickInsideNav = event.target.closest('nav');
+            if (!isClickInsideNav && menuList.classList.contains('active')) {
+                menuToggle.classList.remove('active');
+                menuList.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
